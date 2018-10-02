@@ -1,28 +1,3 @@
-/*
-}
-Main Function:
-{
-InFile
-
-OriginalArray
-TempArray
-
-Call Pull function
-// Print/Render pulled function
-
-Call Mirror function
-// Print/Render mirror function
-
-Call Transpose function
-// Print/Render transpose function
-
-Call Rotate function
-// Print/Render rotate function
-}
-*/
-
-
-
 #include "glyph.h"
 
 int main()
@@ -52,7 +27,7 @@ int main()
 		cout << '\n';
 	}
 
-	//array to string
+	//converting the glyph to a single string
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)
@@ -60,10 +35,9 @@ int main()
 			returnString = returnString + (char)tempArray[i][j];
 		}
 	}
-
-	//String to array
 	cout << '\n';
 	
+	//converting a single string to a glyph
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)
@@ -73,7 +47,8 @@ int main()
 		}
 	}
 	cout << '\n';
-	//print array
+
+	//print the glyph
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)
@@ -83,10 +58,7 @@ int main()
 		cout << '\n';
 	}
 	cout << '\n';
-	
 		system("pause");
 		return 0;
-
-
 }
 
