@@ -31,24 +31,28 @@ then
 }
 
 
-#include "glyph.h"
-void transpose(int &inputArray[][COLUMNS])
-{
-}
-void mirror(int &inputArray[][COLUMNS])
-{
-}
-void rotate(int &inputArray[][COLUMNS])
-{
-}
-void render(int &inputArray[][COLUMNS])
-{
-}
+
+
 
 */
 
-
-
+#include "glyph.h" 
+string  transpose(int inputArray[][COLUMNS])
+{
+	return "A";
+}
+string  mirror(int inputArray[][COLUMNS])
+{
+	return "A";
+}
+string  rotate(int inputArray[][COLUMNS])
+{
+	return "A";
+}
+string  render(int inputArray[][COLUMNS])
+{
+	return "A";
+}
 
 
 

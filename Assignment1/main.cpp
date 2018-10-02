@@ -50,7 +50,30 @@ int main()
 		{
 			cout << tempArray[i][j];
 		}
+		cout << '\n';
+	}
+	
+	//String to array
+	cout << "\n";
+	string returnString = "0006999700006000007009008080090900404009090000000909000200090900000009070003000600700000600007888600";
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLUMNS; j++)
+		{
+			 char temp = returnString[i * 10 + j];
+			 tempArray[i][j] = (int)temp - '0';
+		}
+	}
+	//print array
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLUMNS; j++)
+		{
+			cout << tempArray[i][j];
+		}
+		cout << '\n';
 	}
 	system("pause");
 	return 0;
 }
+
