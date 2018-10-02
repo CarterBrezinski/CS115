@@ -52,18 +52,29 @@ int main()
 		}
 		cout << '\n';
 	}
-	
+
+	string returnString;
+	//array to string
+	for (int i = 0; i < ROWS; i++)
+	{
+		for (int j = 0; j < COLUMNS; j++)
+		{
+			returnString = returnString + (char)tempArray[i][j];
+		}
+	}
+
 	//String to array
 	cout << "\n";
-	string returnString = "0006999700006000007009008080090900404009090000000909000200090900000009070003000600700000600007888600";
+	
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)
 		{
 			 char temp = returnString[i * 10 + j];
-			 tempArray[i][j] = (int)temp - '0';
+			 tempArray[i][j] = (int)temp;
 		}
 	}
+
 	//print array
 	for (int i = 0; i < ROWS; i++)
 	{
