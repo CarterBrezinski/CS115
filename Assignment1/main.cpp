@@ -28,22 +28,21 @@ Call Rotate function
 int main()
 {
 	ifstream inData;
-
 	string filename = "example.glyph";
-
+	string returnString;
+	int tempArray[ROWS][COLUMNS];
 	inData.open(filename);
 
-	int tempArray[ROWS][COLUMNS];
-	//pull array
+	//File input from the example.glyph file
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)
 		{
 			inData >> tempArray[i][j];
-			
 		}
 	}
-	//print array
+
+	//printing out the original glyph pulled from the example.glyph file
 	for (int i = 0; i < ROWS; i++)
 	{
 		for (int j = 0; j < COLUMNS; j++)  
@@ -53,7 +52,6 @@ int main()
 		cout << '\n';
 	}
 
-	string returnString;
 	//array to string
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -64,7 +62,7 @@ int main()
 	}
 
 	//String to array
-	cout << "\n";
+	cout << '\n';
 	
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -74,7 +72,7 @@ int main()
 			 tempArray[i][j] = (int)temp;
 		}
 	}
-
+	cout << '\n';
 	//print array
 	for (int i = 0; i < ROWS; i++)
 	{
@@ -84,7 +82,11 @@ int main()
 		}
 		cout << '\n';
 	}
-	system("pause");
-	return 0;
+	cout << '\n';
+	
+		system("pause");
+		return 0;
+
+
 }
 

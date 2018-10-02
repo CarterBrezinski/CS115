@@ -6,7 +6,7 @@ using namespace std;
 
 const unsigned int ROWS = 10;
 const unsigned int COLUMNS = 10;
-
+ 
 //Function declarations
 /*
 void transpose(int &inputArray[][COLUMNS]);
