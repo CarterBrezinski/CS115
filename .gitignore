@@ -50,3 +50,7 @@ Assignment1/Assignment1\.vcxproj\.filters
 *.enc
 
 *.idb
+
+Assignment3/\.vs/Assignment3/v15/
+
+*.filters
