@@ -1,13 +1,20 @@
 #include "rational.h"
-#include "gcd.h"
+
+using namespace std;
 
 int main()
 {
-	Rational rational1;
-	Rational rational2;
-	long int numerator;
-	long int denominator;
+	Rational rational1(1,4); 
+	Rational rational2(2,4);
+	Rational ratAdd;
+	Rational ratSub;
 
+	ratAdd = rational1.addition(rational2);
+	ratSub = rational1.subtraction(rational2);
+
+	cout << ratAdd.numerator << "/" << ratAdd.denominator << endl;
+	cout << ratSub.numerator << "/" << ratSub.denominator << endl;
+	/*
 	numerator = Rational1.getNumerator();
 
 	denominator = Rational1.getDenominator();
@@ -23,11 +30,11 @@ int main()
 		totalHarmonic = totalHarmonic.addition(new Rational(1, i));
 
 	}
-	
+	*/
 
 
 
-
+	return 0;
 }
 
 /*

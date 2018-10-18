@@ -1,4 +1,7 @@
 #include <iostream>
+#include <iomanip>
+#include <string>
+#include "gcd.h"
 
 using namespace std;
 
@@ -10,15 +13,15 @@ public:
 	Rational();
 	Rational(long int, long int);
 
-	bool Rational :: isSame(const Rational& rational2) const;
-	void Rational :: printRational() const;
+	bool isSame(Rational& rational2);
+	void printRational();
 
 	//I am unsure of types for the functions right now, initially set to void 
-	void Rational :: addition(const Rational& rational2) const;
-	void Rational :: subtraction(const Rational& rational2) const;
+	Rational addition(Rational& rational2);
+	Rational subtraction(Rational& rational2);
 	//multiply, divide, less
 
-private:
+//private:
 	long int numerator;		//numerator of the rational
 	long int denominator;	//denominator of the rational
 

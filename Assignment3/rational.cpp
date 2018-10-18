@@ -5,27 +5,21 @@ Rational :: Rational()
 	numerator = 0;
 	denominator = 0;
 }
-long int Rational :: getDenominator(void)
+long int Rational :: getDenominator()
 {
 	return denominator;
 }
-long int Rational :: getNumerator(void)
+long int Rational::getNumerator()
 {
 	return numerator;
 }
 
-/*
-Print out format:
-- If the numerator is zero, then a zero character ('0') is printed.
-- Otherwise, the following printing procedure is applied.
-- If the numerator and the denominator have the same sign then no sign
-will be printed.
-- Otherwise, a negative sign ('-') is printed.
-*/
-
-void Rational :: printRational() const
+void Rational :: printRational()
 {
 	bool negative = false; //naturally off
+	string sign;
+	int R;
+	int Q;
 	unsigned int num = abs(numerator);
 	unsigned int denom = abs(denominator);
 
@@ -35,49 +29,59 @@ void Rational :: printRational() const
 	}
 	else
 	{
-		if()
+		if(numerator < 0 && denominator < 0)
 		{ 
-			
-			//N < 0 && D < 0
-			//no signs applied infront
-			
+			//no numbers are negative
+			// therefore a space will be applied infront
+			negative = false;
+			sign = " ";
 		}
-		else if()
+		else if(numerator < 0 && denominator > 0)
 		{
-			
-			//N < 0 && D > 0
-			//(-) sign applied infront
-			//negative = true;
-			
+			//one number will be negative
+			// therefore a (-) sign will be applied infront
+			negative = true;
+			sign = "-";
 		}
-		else if()
+		else if(numerator > 0 && denominator < 0)
 		{
-			
-			//N > 0 && D < 0
-			//(-) sign applied infront
-			//negative = true
-			
+			//one number will be negative
+			// therefore a (-) sign will be applied infront
+			negative = true;
+			sign = "-";
 		}
 
-		/*
-		- Following the above, let N be the absolute value of the numerator and
-		D be the absolute value of the denominator.
-		- If N < D then "N/D" should be printed after the sign (if there is
-		one).
-		- If N ? D then the following printing procedure is applied.
-		Let Q = N / D and R = N % D.
-		If R = 0, simply print Q after the sign (if there is one).
-		If R > 0 then
-		print "Q+R/D" if a negative sign has NOT been printed
-		print "Q-R/D" if a negative sign has been printed
-		*/
-
-		if ()
+		if (num < denom)
+		{
+			cout << sign << numerator << "/" << denominator << endl;
+		}
+		else if (num > denom)
+		{
+			Q = num / denom;
+			R = num % denom;
+			//If remainder = 0
+			if (R == 0)
+			{
+				cout << sign << Q << endl;
+			}
+			//If remainder is greater than 0, print the 
+			else if (R > 0)
+			{
+				if (negative == true)
+				{
+					cout << Q << sign << R << "/" << denominator << endl;
+				}
+				else if (negative == false)
+				{
+					cout << Q << sign << R << "/" << denominator << endl;
+				}
+			}
+		}
 		
 	}
 }
 
-bool Rational :: isSame(const Rational& rational2) const
+bool Rational :: isSame(Rational& rational2)
 {
 	bool compare;
 	if (numerator / denominator == rational2.numerator / rational2.denominator)
@@ -87,15 +91,35 @@ bool Rational :: isSame(const Rational& rational2) const
 	return compare;
 }
 
-void Rational::addition(const Rational& rational2) const;
+Rational Rational::addition(Rational& rational2)
 {
+	Rational rational1;
+	Rational sum;
+	long int lowestCommonMultiple;
 	//equate least common multiple
-	//solve
+	lowestCommonMultiple = lcm(denominator, rational2.denominator);
+	numerator = ((numerator*lowestCommonMultiple) / denominator);
+	rational2.numerator = ((rational2.numerator*lowestCommonMultiple) / rational2.denominator);
+	//solve top half
+	sum.numerator = numerator + rational2.numerator;
+	denominator = lowestCommonMultiple;
 	//normalize
+
+	return sum;
 }
-void Rational::subtraction(const Rational& rational2) const;
+Rational Rational::subtraction (Rational& rational2)
 {
+	Rational rational1;
+	Rational sum;
+	long int lowestCommonMultiple;
 	//equate least common multiple
-	//solve
+	lowestCommonMultiple = lcm(denominator, rational2.denominator);
+	numerator = ((numerator*lowestCommonMultiple) / denominator);
+	rational2.numerator = ((rational2.numerator*lowestCommonMultiple) / rational2.denominator);
+	//solve top half
+	sum.numerator = numerator - rational2.numerator;
+	denominator = lowestCommonMultiple;
 	//normalize
+
+	return sum;
 }
