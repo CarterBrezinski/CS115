@@ -1,15 +1,25 @@
-//Reverse.cpp
+/*
+Reverse.cpp
+----
+SID: 200391111
+NAME: Carter Brezinski
+DATE: 11/20/2018
+PURPOSE: 
+*/
 
 #include "container.h"
-#include "managed_array.h"
-#include "guarded_array.h"
+#include "managed_array.h"		//implementation of necessary header files and resources
 #include "process.h"
+#include "Stack.h"
+
+using namespace std;
+
 
 //Reversed print sequence
 //Sort the array backwards, then print normally
-
-//QQ need to have a pointer for the basic, unreversed array
-void reversePrint()
+int reverse()
 {
-	//blank until confirmation on what needs to be declared
+
+
+	return 0;
 }

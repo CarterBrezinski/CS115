@@ -1,19 +1,30 @@
 //Queue.cpp
-
-#include "container.h"			//implementation of necessary header files and resources
-#include "guarded_array.h"
-#include "managed_array.h"
-#include "process.h"
 #include "Queue.h"
-int queueMain(ManagedArray array[], int arraySize)
-{
-	
-/*
-call process_sequence
-- this will draw the basic managed array from the container
-call upon nop.cpp
-- then it will print
-*/
+#include <cassert>
+#include "managed_array.h"
 
-	return 0;
+
+Queue::Queue() : queueArray() {}
+
+//
+void Queue::insert(int x)
+{
+	queueArray.insert(queueArray.size(), x);
+}
+
+//Takes the value from the managed array and sends it to be printed out
+int Queue::remove()
+{
+	assert(!empty());
+	int x;
+	x = queueArray.read(0);
+	queueArray.remove(0);
+	return x;
+}
+
+//
+bool Queue::empty() const
+{
+
+	return queueArray.size() == 0;
 }

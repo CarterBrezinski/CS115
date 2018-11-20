@@ -1,16 +1,30 @@
 //Stack.cpp
-
-#include "container.h"			//implementation of necessary header files and resources
-#include "guarded_array.h"
+#include "Stack.h"
+#include <cassert>
 #include "managed_array.h"
 
-int stackMain(ManagedArray array[], int arraySize)
+
+Stack::Stack() : stackArray() {}
+
+//
+void Stack::insert(int x)
 {
-/*
-call process_sequence
- - gather managed array
-call upon reverse.cpp
-- this will hopefully flip the array so it is now backwards (953862741)
-*/
-	return 0;
+	stackArray.insert(stackArray.size(), x);
+}
+
+//Takes the value from the managed array and sends it to be printed out
+int Stack::remove()
+{
+	assert(!empty());
+	int x;
+	x = stackArray.read(stackArray.size()-1);
+	stackArray.remove(stackArray.size()-1);
+	return x;
+}
+
+//
+bool Stack::empty() const
+{
+	
+	return stackArray.size() == 0;
 }

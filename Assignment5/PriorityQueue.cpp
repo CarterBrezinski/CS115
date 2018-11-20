@@ -1,16 +1,39 @@
 //PriorityQueue.cpp
-
-#include "container.h"			//implementation of necessary header files and resources
-#include "guarded_array.h"
+#include "PriorityQueue.h"
+#include <cassert>
 #include "managed_array.h"
 
-int pQueueMain(ManagedArray array[], int arraySize)
+
+pQueue::pQueue() : priorityArray() {}
+
+//
+void pQueue::insert(int x)
 {
-/*
-call process_sequence
-- this will draw the basic managed array from the container
-call upon nop.cpp
-- then it will print
-*/
-	return 0;
+	priorityArray.insert(priorityArray.size(), x);
+
+	for (int i = 0; i < priorityArray.size(); i++)
+	{
+		if ((x < priorityArray.read(i)) && (x == priorityArray.size() - 1))
+		{
+			priorityArray.insert(i, x);
+			priorityArray.remove(priorityArray.size()-1);
+		}
+	}
+}
+
+//Takes the value from the managed array and sends it to be printed out
+int pQueue::remove()
+{
+	assert(!empty());
+	int x;
+	x = priorityArray.read(0);
+	priorityArray.remove(0);
+	return x;
+}
+
+//
+bool pQueue::empty() const
+{
+
+	return priorityArray.size() == 0;
 }
