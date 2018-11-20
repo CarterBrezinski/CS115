@@ -5,7 +5,6 @@
 #include "guarded_array.h"
 #include "process.h"
 
-
 //Basic print sequence
 //Basic for loop print that just steps through from 0-9 and prints the values with a blank space in between
 

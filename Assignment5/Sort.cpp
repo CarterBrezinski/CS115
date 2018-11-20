@@ -6,9 +6,7 @@
 #include "process.h"
 
 //Sorted print sequence
-//
-//
-
+//This function will have to first sort the array by value first, then print it normally second
 
 //QQ need to have a pointer for the unsorted array
 void sortPrint()

@@ -5,11 +5,8 @@
 #include "guarded_array.h"
 #include "process.h"
 
-
 //Reversed print sequence
-//
-//
-
+//Sort the array backwards, then print normally
 
 //QQ need to have a pointer for the basic, unreversed array
 void reversePrint()

@@ -1,8 +1,21 @@
 //Queue.h
-class Queue
+#include "container.h"
+class Queue :public Container
 {
-	//blank until confirmed what is needed for inheritance
+public:
+	/*
+	void insert(int x)
+	{
 
+	};
+	int remove()
+	{
 
+	};
+	bool empty()
+	{
+
+	};
+	*/
 };
 int queueMain(ManagedArray array[], int arraySize);
