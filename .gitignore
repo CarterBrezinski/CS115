@@ -58,3 +58,11 @@ Assignment3/Assignment3\.vcxproj\.filters
 Assignment4/\.vs/Assignment4/v15/
 
 Assignment4/Assignment4\.vcxproj\.filters
+
+*.filters
+
+Assignment5/\.vs/Assignment5/v15/\.suo
+
+Assignment5/\.vs/Assignment5/v15/Browse\.VC\.db
+
+Assignment5/\.vs/Assignment5/v15/Browse\.VC\.opendb
