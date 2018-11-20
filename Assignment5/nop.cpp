@@ -4,8 +4,11 @@ nop.cpp
 SID: 200391111
 NAME: Carter Brezinski
 DATE: 11/20/2018
-PURPOSE: 
+PURPOSE: the purpose of this file is to complete the management process queue
+this file will output the processed sequence in the original entered order
 */
+
+#include <iostream>
 #include "container.h"
 #include "managed_array.h"		//implementation of necessary header files and resources
 #include "process.h"
@@ -18,7 +21,13 @@ using namespace std;
 
 int nop()
 {
+	cout << "nop.cpp output" << endl;
+	cout << "This program will represent the Queue selection process" << endl;
+	cout << "The sequence will be printed in the order it is initially entered in" << endl;
+	cout << "Enter the number sequence below: " << endl;
+	cout << "(Enter a letter or character once the intended sequence is entered to exit/continue)" << endl; 
 
-
+	Queue Container;
+	process_sequence(Container);
 	return 0;
 }
