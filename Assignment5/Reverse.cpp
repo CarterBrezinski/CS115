@@ -17,17 +17,21 @@ sequence in reverse order.
 
 using namespace std;
 
+//Reverse print sequence:
+//This function will sort the array backwards (9-0)
+//The only difference between this function and sort.cpp is the alteration in the remove function
+//This alteration causes the remove to occur from the far right side, as opposed to the far left side
 
-//Reversed print sequence
-//Sort the array backwards, then print normally
-int reverse()
+int main()
 {
+	//output statements required for this file
 	cout << "reverse.cpp output" << endl;
 	cout << "This program will represent the Stack selection process" << endl;
 	cout << "The sequence will be printed backwards/in reverse order" << endl;
 	cout << "Enter the number sequence below: " << endl;
 	cout << "(Enter a letter or other character once the intended sequence is entered to exit/continue)" << endl;
 
+	//create semi-virtual container that will be sent into process_sequence to be properly integrated
 	Stack Container;
 	process_sequence(Container);
 	return 0;

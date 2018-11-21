@@ -7,14 +7,12 @@
 class Queue :public Container
 {
 public:
-	//
 	// Constructor
 	//
 	// Purpose: Initializes array to have zero size.
 	// Argument(s): N/A
 	// Side Effect: The array is initialized to be empty.
 	// Return: N/A
-	//
 	Queue();
 
 	// insert
@@ -29,11 +27,8 @@ public:
 	//              shifted to make room for x.  The array size 
 	//              will be increased by one.
 	// Return: N/A.
-	//
 	virtual void insert(int x);
 
-	//QQ EDIT
-	//
 	// remove(i)
 	//
 	// Purpose: Remove an element from the array.
@@ -45,19 +40,17 @@ public:
 	//              by the removed element.  The array size will be 
 	//              decreased by one.
 	// Return: N/A.
-	//
 	virtual int remove();
 
-	//
 	//empty(i)
 	//Purpose: Check if array is empty
 	//Argument(s):
 	//Return: will return a bool variable depending on whether or not the array is empty
-	//
 	virtual bool empty() const;
 
-
+	
 private:
+	//declaration that creates a managed array labeled priority array that will be partially used for the process_sequence function
 	ManagedArray queueArray;
 };
 

@@ -7,14 +7,12 @@
 class pQueue :public Container
 {
 public:
-	//
 	// Constructor
 	//
 	// Purpose: Initializes array to have zero size.
 	// Argument(s): N/A
 	// Side Effect: The array is initialized to be empty.
 	// Return: N/A
-	//
 	pQueue();
 
 	// insert
@@ -29,35 +27,30 @@ public:
 	//              shifted to make room for x.  The array size 
 	//              will be increased by one.
 	// Return: N/A.
-	//
 	virtual void insert(int x);
 
-	//QQ EDIT
-	//
 	// remove(i)
 	//
 	// Purpose: Remove an element from the array.
 	// Argument(s):
-	//   i : index of the element to be removed.
+	//   i is the index of the element to be removed.
 	// Precondition: i < size() && size() > 0
 	// Side Effect: Remove the array element at index i.  Array 
 	//              elements will be shifted to fill the "gap" left 
 	//              by the removed element.  The array size will be 
 	//              decreased by one.
 	// Return: N/A.
-	//
 	virtual int remove();
 
-	//
 	//empty(i)
 	//Purpose: Check if array is empty
 	//Argument(s):
 	//Return: will return a bool variable depending on whether or not the array is empty
-	//
 	virtual bool empty() const;
 
 
-private:
+private:	
+	//declaration that creates a managed array labeled priority array that will be partially used for the process_sequence function
 	ManagedArray priorityArray;
 };
 
