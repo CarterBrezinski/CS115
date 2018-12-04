@@ -58,3 +58,13 @@ Assignment3/Assignment3\.vcxproj\.filters
 Assignment4/\.vs/Assignment4/v15/
 
 Assignment4/Assignment4\.vcxproj\.filters
+
+*.db
+
+*.ipch
+
+*.filters
+
+Assignment6/\.vs/Assignment6/v15/\.suo
+
+Assignment6/\.vs/Assignment6/v15/
