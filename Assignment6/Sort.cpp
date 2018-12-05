@@ -1,15 +1,41 @@
-//Sort.cpp
+/*
+Sort.cpp
+----
+SID: 200391111
+NAME: Carter Brezinski
+DATE: 11/20/2018
+PURPOSE: the purpose of this file is to complete the management process priority queue
+this file will attempt to output the processed sequence in ascending order
+*/
 
+#include <iostream>
 #include "container.h"
-#include "managed_array.h"
-#include "guarded_array.h"
+#include "managed_arrayQ2.h"		//implementation of necessary header files and resources
 #include "process.h"
+#include "PriorityQueue.h"
+
+using namespace std;
 
 //Sorted print sequence
-//This function will have to first sort the array by value first, then print it normally second
+//This function will have to first sort the array by value first
+//This occurs by creating a semi-virtual container through the priorityQueue file
+//That container will then be sent into the process sequence function 
+//The most important portion of the function is the altered insert function in priorityQueue.cpp
 
-//QQ need to have a pointer for the unsorted array
-void sortPrint()
+/*
+int main()
 {
-	//blank until confirmation on what needs to be declared
+	//output statements
+	cout << "Assignment 6 - sort.cpp output" << endl;
+	cout << "This program will represent the Priority Queue selection process" << endl;
+	cout << "This program test confirms that the array has an initial capacity of 500" << endl;
+	cout << "The sequence will be printed in ascending order from least to greatest" << endl;
+	cout << "Enter the number sequence below: " << endl;
+	cout << "(Enter a letter or other character once the intended sequence is entered to exit/continue)" << endl;
+
+	//create semi-virtual container that will be sent into process_sequence to be properly integrated
+	pQueue Container;
+	process_sequence(Container);
+	return 0;
 }
+*/

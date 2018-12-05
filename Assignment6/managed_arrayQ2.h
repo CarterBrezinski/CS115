@@ -1,8 +1,8 @@
 #pragma once
-#ifndef __MANAGED_ARRAY_H__
-#define __MANAGED_ARRAY_H__
+#ifndef __MANAGED_ARRAYQ2_H__
+#define __MANAGED_ARRAYQ2_H__
 
-#include "guarded_array.h"
+#include "guarded_arrayQ2.h"
 
 //
 // ManagedArray
@@ -26,37 +26,6 @@ public:
 	ManagedArray();
 
 	//
-	// Constructor
-	//
-	// Purpose: Initializes array to a given size.  All array elements
-	//          are initialized to zero.
-	// Argument(s):
-	//  N : size of array
-	// Precondition: N <= MAX_LENGTH
-	// Side Effect: The array is initialized to contain N occurrences
-	//              of the number zero.
-	// Return: N/A
-	//
-
-	ManagedArray(unsigned N);
-
-	//
-	// Constructor
-	//
-	// Purpose: Initializes array to a given size.  All array elements
-	//          are initialized to x.
-	// Argument(s):
-	//  N : size of array
-	//  x : initial value of array elements
-	// Precondition: N <= MAX_LENGTH
-	// Side Effect: The array is initialized to contain N occurrences
-	//              of x.
-	// Return: N/A
-	//
-
-	ManagedArray(unsigned N, ItemType x);
-
-	//
 	// size
 	//
 	// Purpose: Return the current size of the array.
@@ -64,7 +33,7 @@ public:
 	// Return: current size of the array
 	//
 
-	unsigned size() const;
+	unsigned int size() const;
 
 	//
 	// read
@@ -76,7 +45,7 @@ public:
 	// Return: Value of array element at index i.
 	//
 
-	ItemType read(unsigned i) const;
+	ItemType read(unsigned int i) const;
 
 	//
 	// write
@@ -89,7 +58,7 @@ public:
 	// Return: N/A.
 	//
 
-	void write(unsigned i, ItemType x);
+	void write(unsigned int i, ItemType x);
 
 	//
 	// insert
@@ -98,7 +67,7 @@ public:
 	// Argument(s):
 	//  i : index at which x is to be inserted
 	//  x : value to be inserted into array.
-	// Precondition: i <= size() && size() < MAX_LENGTH
+	// Precondition: i <= size() && size() < array.Size
 	// Side Effect: The new element x will be inserted into the
 	//              the array at index i.  Array elements will be 
 	//              shifted to make room for x.  The array size 
@@ -106,7 +75,7 @@ public:
 	// Return: N/A.
 	//
 
-	void insert(unsigned i, ItemType x);
+	void insert(unsigned int i, ItemType x);
 
 	//
 	// remove(i)
@@ -122,13 +91,20 @@ public:
 	// Return: N/A.
 	//
 
-	void remove(unsigned i);
+	void remove(unsigned int i);
+
+	ManagedArray(const ManagedArray &array2);
+
+	ManagedArray& operator=(const ManagedArray &array2);
+
+	unsigned int getCap();
+
+	~ManagedArray();
 
 private:
-
-	unsigned count;
+	unsigned int count;
 	GuardedArray array;
-
+	unsigned int arrayCapacity = 4;
 };
 
 #endif
